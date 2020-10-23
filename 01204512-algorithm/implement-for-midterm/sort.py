@@ -2,13 +2,15 @@ class SortTools(object):
     class algorithm:
         MERGE_SORT = 0
         QUICK_SORT = 1
-        BUBBLE_SORT = 2
+        BUBBLE_SORT = 2,
+        INSERTION_SORT = 3
 
     def __init__(self, method):
         avaliable_algorithm = [
             self.merge_sort,
             self.quick_sort,
-            self.bubble_sort
+            self.bubble_sort,
+            self.insertion_sort
         ]
         self.sort = avaliable_algorithm[method]
 
@@ -66,9 +68,18 @@ class SortTools(object):
                     is_sorted = False
                     data[i], data[i+1] = data[i+1], data[i]
 
+    def insertion_sort(self, data):
+        for i in range(1, len(data)):
+            key = data[i]
+            j = i-1
+            while j >= 0 and key < data[j]:
+                data[j + 1] = data[j]
+                j -= 1
+            data[j + 1] = key
+
 
 if __name__ == "__main__":
-    sort_tool = SortTools(method=SortTools.algorithm.QUICK_SORT)
+    sort_tool = SortTools(method=SortTools.algorithm.INSERTION_SORT)
     data = [3, 1, 5, 2, 6, 9, 4, 7]
     sort_tool.sort(data)
     print(data)
