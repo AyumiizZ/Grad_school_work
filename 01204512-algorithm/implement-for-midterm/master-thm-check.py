@@ -41,3 +41,6 @@ print()
 master_brute_force(lambda n: n**2, 5, 2)
 master_brute_force(lambda n: n**1.5, 5, 2)
 master_brute_force(lambda n: (n**2)*log(n, 2), 10, 10, base=2)
+
+master_brute_force(lambda n: n**2*log(n, 10), 4, 2)
+master_brute_force(lambda n: 1, 3, 2)
