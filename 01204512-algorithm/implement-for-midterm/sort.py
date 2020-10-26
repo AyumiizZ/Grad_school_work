@@ -1,3 +1,12 @@
+"""
+    File name: sort.py
+    Author: AyumiizZ
+    Date created: 2020/10/23
+    Python Version: 3.8.5
+    About: SortTools that can choose algorithm
+"""
+
+
 class SortTools(object):
     class algorithm:
         MERGE_SORT = 0
