@@ -1,3 +1,11 @@
+"""
+    File name: find-smallest.py
+    Author: AyumiizZ
+    Date created: 2020/10/24
+    Python Version: 3.8.5
+    About: find smallest number in decreasing and increasing sequence
+"""
+
 
 def find_smallest(arr):
     n = len(arr)

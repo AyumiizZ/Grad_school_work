@@ -1,7 +1,15 @@
+"""
+    File name: nnarray.py
+    Date created: 2020/10/24
+    Python Version: 3.8.5
+    About: Binary search in n*n Arrays
+"""
+
+
 def search(matrix, lower_row, upper_row, lower_col, upper_col, key):
     mid_row = lower_row + (upper_row - lower_row) // 2
     mid_col = lower_col + (upper_col - lower_col) // 2
-    if (matrix[mid_row][mid_col] == key):  # If key is present at middle
+    if (matrix[mid_row][mid_col] == key):
         print("Found ", key, " at ", mid_row, " ", mid_col)
     else:
         if (mid_row != upper_row or mid_col != lower_col):

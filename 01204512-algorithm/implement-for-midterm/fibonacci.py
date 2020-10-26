@@ -1,4 +1,11 @@
-# O(log n) Fast doubling fibonacci algorithm
+"""
+    File name: fibonacci.py
+    Author: AyumiizZ
+    Date created: 2020/10/23
+    Python Version: 3.8.5
+    About: O(log n) Fast doubling fibonacci algorithm
+"""
+
 
 def Fibonacci(n):
     '''return F(n), F(n+1)'''

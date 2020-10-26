@@ -1,9 +1,11 @@
+"""
+    File name: master-thm-check.py
+    Author: AyumiizZ
+    Date created: 2020/10/23
+    Python Version: 3.8.5
+    About: Check master theorem case
+"""
 from math import log, copysign
-
-
-def f(n):
-    return 1
-    # return n**2*log(n, 2)
 
 
 def master_brute_force(f, a, b, base=10):
@@ -16,16 +18,13 @@ def master_brute_force(f, a, b, base=10):
     for i in zip(case2, res_f):
         ea_err = i[0]-i[1]
         error += copysign(1, ea_err) * (ea_err**2)
-        # print(error)
     error = error/sum(case2)
-    # print('error', error)
     if error < 1e5 and error > -1e5:
         print('case2')
     elif error > 0:
         print('case1')
     else:
         print('case3')
-    # print('----')
 
 
 # Slide
@@ -41,6 +40,8 @@ print()
 master_brute_force(lambda n: n**2, 5, 2)
 master_brute_force(lambda n: n**1.5, 5, 2)
 master_brute_force(lambda n: (n**2)*log(n, 2), 10, 10, base=2)
+print()
 
+# Exam
 master_brute_force(lambda n: n**2*log(n, 10), 4, 2)
 master_brute_force(lambda n: 1, 3, 2)
